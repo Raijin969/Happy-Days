@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(
+                #000000 100%
+            );
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+        }
+
+        p {
+            color: #ffffff;
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .p2 {
+            color: #ffffff;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 0 20px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .p3 {
+            color: #ffffff;
+            font-family: times new roman;
+            text-align: center;
+            padding: 0 20px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .image-row img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #timer {
+            color: #ffffff;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <header>
+            <h1>My best moments with you</h1>
+        </header>
+        <p>Never would I expect that I would find the loml at a bar at a random time,</p>
+        <p>nevertheless, I did and I am so glad that I did.</p>
+        <p>You are the best thing that has ever happened to me and I always choose you.</p>
+        <p>You are my everything and I love you more than words can express.</p>
+        <h2>August 27, 2026</h2>
+        <div class="image-row">
+            <img src="image 1.jpg" alt="Description 1">
+            <img src="image 2.jpg" alt="Description 2">
+            <img src="image 3.jpg" alt="Description 3">
+            <img src="image 4.jpg" alt="Description 4">
+            <img src="image 5.jpg" alt="Description 5">
+        </div>
+        <p class="p2">This was our first meet!! Mej nahihiya pa ako pero I'm grateful na madaldal ka and I love </p>
+        <p class="p2">listening to every single one of your stories. I love how you make me feel comfortable and how you make me laugh. </p>
+        <p class="p2">It may have been a short time with you kasi needed ako sa house, but I am grateful for our first date together.</p>
+        <p class="p2">Sobrang saya ko after natin magkita and I couldnt wait for the next one. Every single moment naaalala ko pa in detail non</p>
+        <p class="p2">and I dont want to forget a single thing about you or the times that we spent together.</p>
+        <h2>September 5-20, 2026</h2>
+        <div class="image-row">
+            <img src="image 6.jpg" alt="Description 6">
+            <img src="image 7.jpg" alt="Description 7">
+            <img src="image 8.jpg" alt="Description 8">
+            <img src="image 9.jpg" alt="Description 9">
+            <img src="image 10.jpg" alt="Description 10">
+            <img src="image 11.jpg" alt="Description 11">
+        </div>
+        <p class="p3">This month of September was filled with amazing moments and unforgettable memories.</p>
+        <p class="p3">Eto yung month na we got to be closer than ever, dito natin nalaman ang isa't isa.</p>
+        <p class="p3">I love how we can talk about anything and everything, and how we can be ourselves around each other.</p>
+        <p class="p3">Sa lahat ng mga nalalaman ko about sa life mo, it encourages me more to love you more than ever</p>
+
+        <div id="timer"></div>
+
+        <p class="p3">This is an ongoing project and memory of our time together, kada good pic natin, ilalagay ko dito.</p>
+        <p class="p3">So that meron tayo lagi collection of our memories and para makita mo what I feel about those times that we shared.</p>
+        <p class="p3">I love you</p>
+
+        <script>
+            const startDate = new Date("August 2, 2026 21:46:00");
+
+            function updateTimer() {
+                const now = new Date();
+                let diff = now - startDate;
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                document.getElementById('timer').textContent =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s together`;
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        </script>
+    </body>
+</html>
